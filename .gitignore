@@ -46,7 +46,6 @@ coverage.xml
 .hypothesis/
 venv/
 .python-version
-.idea/
 
 # Translations
 *.mo

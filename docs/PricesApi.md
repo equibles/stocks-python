@@ -1,6 +1,6 @@
 # equibles_stocks.PricesApi
 
-All URIs are relative to */*
+All URIs are relative to *https://api.equibles.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
