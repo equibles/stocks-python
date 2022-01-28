@@ -65,48 +65,6 @@ try:
 except ApiException as e:
     print("Exception when calling ExchangesApi->currencies: %s\n" % e)
 
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: Query String
-configuration = equibles_stocks.Configuration()
-configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = equibles_stocks.ExchangesApi(equibles_stocks.ApiClient(configuration))
-
-try:
-    # Get the list of all the exchanges supported by this API.
-    api_response = api_instance.list()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ExchangesApi->list: %s\n" % e)
-
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: Query String
-configuration = equibles_stocks.Configuration()
-configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = equibles_stocks.ExchangesApi(equibles_stocks.ApiClient(configuration))
-operating_mic = 'operating_mic_example' # str | The operating MIC of the exchange to search.
-
-try:
-    # Get all the stocks for a given exchange.
-    api_response = api_instance.stocks(operating_mic)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ExchangesApi->stocks: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -194,5 +152,5 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
+[Equibles](https://www.equibles.com)\
 equibles@gmail.com
