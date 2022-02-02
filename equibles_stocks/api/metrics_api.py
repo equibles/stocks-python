@@ -42,8 +42,8 @@ class MetricsApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 1000.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: MetricNullablePointsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,8 +65,8 @@ class MetricsApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 1000.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: MetricNullablePointsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -115,7 +115,7 @@ class MetricsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/metrics/pricetoearnings', 'GET',

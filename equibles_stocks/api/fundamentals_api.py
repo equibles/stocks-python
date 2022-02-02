@@ -42,8 +42,8 @@ class FundamentalsApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 1000.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: DividendsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,8 +65,8 @@ class FundamentalsApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 1000.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: DividendsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -115,7 +115,7 @@ class FundamentalsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/fundamentals/dividends', 'GET',
@@ -146,8 +146,8 @@ class FundamentalsApi(object):
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
         :param int year: The year of the report. (required)
         :param FiscalPeriod fiscal_period: The fiscal period of the report. (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 50. Default: 50.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 50.
         :return: FundamentalsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -172,8 +172,8 @@ class FundamentalsApi(object):
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
         :param int year: The year of the report. (required)
         :param FiscalPeriod fiscal_period: The fiscal period of the report. (required)
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 50. Default: 50.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 50.
         :return: FundamentalsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -234,7 +234,7 @@ class FundamentalsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/fundamentals/financialreports', 'GET',

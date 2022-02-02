@@ -1,5 +1,4 @@
 # Equibles Stocks API for Python
-
 ## Requirements.
 
 Python 2.7 and 3.4+
@@ -44,11 +43,6 @@ import equibles_stocks
 from equibles_stocks.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: Query String
 configuration = equibles_stocks.Configuration()
 configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
@@ -64,7 +58,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ExchangesApi->currencies: %s\n" % e)
-
 ```
 
 ## Documentation for API Endpoints
@@ -83,11 +76,13 @@ Class | Method | HTTP request | Description
 *NewsApi* | [**publishers**](docs/NewsApi.md#publishers) | **GET** /stocks/news/publishers | Get all the available news publishers.
 *PerformanceApi* | [**list**](docs/PerformanceApi.md#list) | **GET** /stocks/performance/list | Lists the performance for a given stock.
 *PricesApi* | [**end_of_day**](docs/PricesApi.md#end_of_day) | **GET** /stocks/prices/endofday | Lists the end of day prices for a given stock.
+*PricesApi* | [**intraday**](docs/PricesApi.md#intraday) | **GET** /stocks/prices/intraday | Lists the intraday prices for a given stock with one minute precision.
 *SectorsApi* | [**list**](docs/SectorsApi.md#list) | **GET** /stocks/sectors/list | Lists all the sectors.
 *SectorsApi* | [**search_stocks**](docs/SectorsApi.md#search_stocks) | **GET** /stocks/sectors/searchstocks | Lists and the stock in a given sector/industry.
 *StocksApi* | [**list**](docs/StocksApi.md#list) | **GET** /stocks/list | Get a list of all the available stocks.
 *StocksApi* | [**officers**](docs/StocksApi.md#officers) | **GET** /stocks/officers | Get the officers of the company.
 *StocksApi* | [**profile**](docs/StocksApi.md#profile) | **GET** /stocks/profile | The profile of this stock.
+*StocksApi* | [**screener**](docs/StocksApi.md#screener) | **POST** /stocks/screener | Get a list of stocks constraint to several criteria.
 *StocksApi* | [**search**](docs/StocksApi.md#search) | **GET** /stocks/search | Search among all the available stocks.
 *StocksApi* | [**splits**](docs/StocksApi.md#splits) | **GET** /stocks/splits | Get all the splits for a given stock.
 *TransactionsApi* | [**insiders**](docs/TransactionsApi.md#insiders) | **GET** /stocks/transactions/insiders | Lists the insider transactions for a given stock.
@@ -98,9 +93,6 @@ Class | Method | HTTP request | Description
  - [AssetType](docs/AssetType.md)
  - [BalanceSheet](docs/BalanceSheet.md)
  - [CashFlowStatement](docs/CashFlowStatement.md)
- - [CommonStock](docs/CommonStock.md)
- - [CommonStockResponse](docs/CommonStockResponse.md)
- - [CommonStocksResponse](docs/CommonStocksResponse.md)
  - [CurrenciesResponse](docs/CurrenciesResponse.md)
  - [Currency](docs/Currency.md)
  - [Dividend](docs/Dividend.md)
@@ -126,23 +118,21 @@ Class | Method | HTTP request | Description
  - [PricesResponse](docs/PricesResponse.md)
  - [Publisher](docs/Publisher.md)
  - [PublishersResponse](docs/PublishersResponse.md)
+ - [Recommendation](docs/Recommendation.md)
  - [ResponseStatus](docs/ResponseStatus.md)
+ - [ScreenerRequest](docs/ScreenerRequest.md)
  - [Sector](docs/Sector.md)
  - [SectorsResponse](docs/SectorsResponse.md)
  - [SplitsResponse](docs/SplitsResponse.md)
+ - [StockProfile](docs/StockProfile.md)
+ - [StockProfileResponse](docs/StockProfileResponse.md)
+ - [StockProfilesResponse](docs/StockProfilesResponse.md)
  - [StockSplit](docs/StockSplit.md)
  - [Transaction](docs/Transaction.md)
  - [TransactionType](docs/TransactionType.md)
  - [TransactionsResponse](docs/TransactionsResponse.md)
 
 ## Documentation For Authorization
-
-
-## Bearer
-
-- **Type**: API key
-- **API key parameter name**: Authorization
-- **Location**: HTTP header
 
 ## Query String
 

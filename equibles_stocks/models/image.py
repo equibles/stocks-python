@@ -81,6 +81,7 @@ class Image(object):
     def size(self):
         """Gets the size of this Image.  # noqa: E501
 
+        The size of the image in bytes.  # noqa: E501
 
         :return: The size of this Image.  # noqa: E501
         :rtype: int
@@ -91,6 +92,7 @@ class Image(object):
     def size(self, size):
         """Sets the size of this Image.
 
+        The size of the image in bytes.  # noqa: E501
 
         :param size: The size of this Image.  # noqa: E501
         :type: int
@@ -102,6 +104,7 @@ class Image(object):
     def extension(self):
         """Gets the extension of this Image.  # noqa: E501
 
+        The image extension. I.e. png.  # noqa: E501
 
         :return: The extension of this Image.  # noqa: E501
         :rtype: str
@@ -112,6 +115,7 @@ class Image(object):
     def extension(self, extension):
         """Sets the extension of this Image.
 
+        The image extension. I.e. png.  # noqa: E501
 
         :param extension: The extension of this Image.  # noqa: E501
         :type: str
@@ -123,6 +127,7 @@ class Image(object):
     def filename(self):
         """Gets the filename of this Image.  # noqa: E501
 
+        The image name.  # noqa: E501
 
         :return: The filename of this Image.  # noqa: E501
         :rtype: str
@@ -133,6 +138,7 @@ class Image(object):
     def filename(self, filename):
         """Sets the filename of this Image.
 
+        The image name.  # noqa: E501
 
         :param filename: The filename of this Image.  # noqa: E501
         :type: str
@@ -144,6 +150,7 @@ class Image(object):
     def content_type(self):
         """Gets the content_type of this Image.  # noqa: E501
 
+        The content type. I.e. image/png.  # noqa: E501
 
         :return: The content_type of this Image.  # noqa: E501
         :rtype: str
@@ -154,6 +161,7 @@ class Image(object):
     def content_type(self, content_type):
         """Sets the content_type of this Image.
 
+        The content type. I.e. image/png.  # noqa: E501
 
         :param content_type: The content_type of this Image.  # noqa: E501
         :type: str
@@ -165,6 +173,7 @@ class Image(object):
     def web_path(self):
         """Gets the web_path of this Image.  # noqa: E501
 
+        The url of the folder where the image is stored.  # noqa: E501
 
         :return: The web_path of this Image.  # noqa: E501
         :rtype: str
@@ -175,6 +184,7 @@ class Image(object):
     def web_path(self, web_path):
         """Sets the web_path of this Image.
 
+        The url of the folder where the image is stored.  # noqa: E501
 
         :param web_path: The web_path of this Image.  # noqa: E501
         :type: str
@@ -186,6 +196,7 @@ class Image(object):
     def web_pathname(self):
         """Gets the web_pathname of this Image.  # noqa: E501
 
+        The url where the image stored. You can use this URL to download the image.  # noqa: E501
 
         :return: The web_pathname of this Image.  # noqa: E501
         :rtype: str
@@ -196,6 +207,7 @@ class Image(object):
     def web_pathname(self, web_pathname):
         """Sets the web_pathname of this Image.
 
+        The url where the image stored. You can use this URL to download the image.  # noqa: E501
 
         :param web_pathname: The web_pathname of this Image.  # noqa: E501
         :type: str
@@ -207,6 +219,7 @@ class Image(object):
     def width(self):
         """Gets the width of this Image.  # noqa: E501
 
+        The width in pixels of the image.  # noqa: E501
 
         :return: The width of this Image.  # noqa: E501
         :rtype: int
@@ -217,6 +230,7 @@ class Image(object):
     def width(self, width):
         """Sets the width of this Image.
 
+        The width in pixels of the image.  # noqa: E501
 
         :param width: The width of this Image.  # noqa: E501
         :type: int
@@ -228,6 +242,7 @@ class Image(object):
     def height(self):
         """Gets the height of this Image.  # noqa: E501
 
+        The height in pixels of the image.  # noqa: E501
 
         :return: The height of this Image.  # noqa: E501
         :rtype: int
@@ -238,6 +253,7 @@ class Image(object):
     def height(self, height):
         """Sets the height of this Image.
 
+        The height in pixels of the image.  # noqa: E501
 
         :param height: The height of this Image.  # noqa: E501
         :type: int

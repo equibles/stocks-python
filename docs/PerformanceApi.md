@@ -19,11 +19,6 @@ import equibles_stocks
 from equibles_stocks.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: Query String
 configuration = equibles_stocks.Configuration()
 configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
@@ -54,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [Query String](../README.md#Query String)
+[Query String](../README.md#Query String)
 
 ### HTTP request headers
 

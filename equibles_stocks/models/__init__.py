@@ -17,9 +17,6 @@ from __future__ import absolute_import
 from equibles_stocks.models.asset_type import AssetType
 from equibles_stocks.models.balance_sheet import BalanceSheet
 from equibles_stocks.models.cash_flow_statement import CashFlowStatement
-from equibles_stocks.models.common_stock import CommonStock
-from equibles_stocks.models.common_stock_response import CommonStockResponse
-from equibles_stocks.models.common_stocks_response import CommonStocksResponse
 from equibles_stocks.models.currencies_response import CurrenciesResponse
 from equibles_stocks.models.currency import Currency
 from equibles_stocks.models.dividend import Dividend
@@ -45,10 +42,15 @@ from equibles_stocks.models.price import Price
 from equibles_stocks.models.prices_response import PricesResponse
 from equibles_stocks.models.publisher import Publisher
 from equibles_stocks.models.publishers_response import PublishersResponse
+from equibles_stocks.models.recommendation import Recommendation
 from equibles_stocks.models.response_status import ResponseStatus
+from equibles_stocks.models.screener_request import ScreenerRequest
 from equibles_stocks.models.sector import Sector
 from equibles_stocks.models.sectors_response import SectorsResponse
 from equibles_stocks.models.splits_response import SplitsResponse
+from equibles_stocks.models.stock_profile import StockProfile
+from equibles_stocks.models.stock_profile_response import StockProfileResponse
+from equibles_stocks.models.stock_profiles_response import StockProfilesResponse
 from equibles_stocks.models.stock_split import StockSplit
 from equibles_stocks.models.transaction import Transaction
 from equibles_stocks.models.transaction_type import TransactionType

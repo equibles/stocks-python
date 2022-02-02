@@ -33,7 +33,6 @@ class Price(object):
         'low': 'float',
         'open': 'float',
         'volume': 'int',
-        'split_factor': 'float',
         'time': 'datetime'
     }
 
@@ -43,18 +42,16 @@ class Price(object):
         'low': 'low',
         'open': 'open',
         'volume': 'volume',
-        'split_factor': 'splitFactor',
         'time': 'time'
     }
 
-    def __init__(self, close=None, high=None, low=None, open=None, volume=None, split_factor=None, time=None):  # noqa: E501
+    def __init__(self, close=None, high=None, low=None, open=None, volume=None, time=None):  # noqa: E501
         """Price - a model defined in Swagger"""  # noqa: E501
         self._close = None
         self._high = None
         self._low = None
         self._open = None
         self._volume = None
-        self._split_factor = None
         self._time = None
         self.discriminator = None
         if close is not None:
@@ -67,8 +64,6 @@ class Price(object):
             self.open = open
         if volume is not None:
             self.volume = volume
-        if split_factor is not None:
-            self.split_factor = split_factor
         if time is not None:
             self.time = time
 
@@ -176,27 +171,6 @@ class Price(object):
         """
 
         self._volume = volume
-
-    @property
-    def split_factor(self):
-        """Gets the split_factor of this Price.  # noqa: E501
-
-
-        :return: The split_factor of this Price.  # noqa: E501
-        :rtype: float
-        """
-        return self._split_factor
-
-    @split_factor.setter
-    def split_factor(self, split_factor):
-        """Sets the split_factor of this Price.
-
-
-        :param split_factor: The split_factor of this Price.  # noqa: E501
-        :type: float
-        """
-
-        self._split_factor = split_factor
 
     @property
     def time(self):

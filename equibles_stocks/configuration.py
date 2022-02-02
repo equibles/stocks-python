@@ -229,13 +229,6 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The Auth Settings information dict.
         """
         return {
-            'Bearer':
-                {
-                    'type': 'api_key',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': self.get_api_key_with_prefix('Authorization')
-                },
             'Query String':
                 {
                     'type': 'api_key',

@@ -20,11 +20,6 @@ import equibles_stocks
 from equibles_stocks.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: Query String
 configuration = equibles_stocks.Configuration()
 configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
@@ -34,8 +29,8 @@ configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = equibles_stocks.FundamentalsApi(equibles_stocks.ApiClient(configuration))
 full_ticker = 'full_ticker_example' # str | The fully qualified ticker of the stock. Example: AAPL.XNAS
-page = 1 # int | The number of the page to request. Default: 1. (optional) (default to 1)
-page_size = 1000 # int | The number of elements in each page. Max value: 1000. Default: 1000. (optional) (default to 1000)
+page = 1 # int | The number of the page to request. (optional) (default to 1)
+page_size = 1000 # int | The number of elements in each page. Max value: 1000. (optional) (default to 1000)
 
 try:
     # Get the dividends for a given stock.
@@ -50,8 +45,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **full_ticker** | **str**| The fully qualified ticker of the stock. Example: AAPL.XNAS | 
- **page** | **int**| The number of the page to request. Default: 1. | [optional] [default to 1]
- **page_size** | **int**| The number of elements in each page. Max value: 1000. Default: 1000. | [optional] [default to 1000]
+ **page** | **int**| The number of the page to request. | [optional] [default to 1]
+ **page_size** | **int**| The number of elements in each page. Max value: 1000. | [optional] [default to 1000]
 
 ### Return type
 
@@ -59,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [Query String](../README.md#Query String)
+[Query String](../README.md#Query String)
 
 ### HTTP request headers
 
@@ -83,11 +78,6 @@ import equibles_stocks
 from equibles_stocks.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
-configuration = equibles_stocks.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: Query String
 configuration = equibles_stocks.Configuration()
 configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
@@ -99,8 +89,8 @@ api_instance = equibles_stocks.FundamentalsApi(equibles_stocks.ApiClient(configu
 full_ticker = 'full_ticker_example' # str | The fully qualified ticker of the stock. Example: AAPL.XNAS
 year = 56 # int | The year of the report.
 fiscal_period = equibles_stocks.FiscalPeriod() # FiscalPeriod | The fiscal period of the report.
-page = 1 # int | The number of the page to request. Default: 1. (optional) (default to 1)
-page_size = 50 # int | The number of elements in each page. Max value: 50. Default: 50. (optional) (default to 50)
+page = 1 # int | The number of the page to request. (optional) (default to 1)
+page_size = 50 # int | The number of elements in each page. Max value: 50. (optional) (default to 50)
 
 try:
     # Get the financial statements for a given stock.
@@ -117,8 +107,8 @@ Name | Type | Description  | Notes
  **full_ticker** | **str**| The fully qualified ticker of the stock. Example: AAPL.XNAS | 
  **year** | **int**| The year of the report. | 
  **fiscal_period** | [**FiscalPeriod**](.md)| The fiscal period of the report. | 
- **page** | **int**| The number of the page to request. Default: 1. | [optional] [default to 1]
- **page_size** | **int**| The number of elements in each page. Max value: 50. Default: 50. | [optional] [default to 50]
+ **page** | **int**| The number of the page to request. | [optional] [default to 1]
+ **page_size** | **int**| The number of elements in each page. Max value: 50. | [optional] [default to 50]
 
 ### Return type
 
@@ -126,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer), [Query String](../README.md#Query String)
+[Query String](../README.md#Query String)
 
 ### HTTP request headers
 

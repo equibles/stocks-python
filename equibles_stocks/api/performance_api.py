@@ -107,7 +107,7 @@ class PerformanceApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/performance/list', 'GET',

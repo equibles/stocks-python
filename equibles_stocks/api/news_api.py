@@ -43,8 +43,8 @@ class NewsApi(object):
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock used to filter the results. Example: AAPL.XNAS
         :param str publisher_name: A news publisher used to filter the results.
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 500. Default: 100.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 500.
         :return: NewsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,8 +67,8 @@ class NewsApi(object):
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock used to filter the results. Example: AAPL.XNAS
         :param str publisher_name: A news publisher used to filter the results.
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 500. Default: 100.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 500.
         :return: NewsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -115,7 +115,7 @@ class NewsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/news/list', 'GET',
@@ -142,8 +142,8 @@ class NewsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 100.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: PublishersResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -164,8 +164,8 @@ class NewsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int page: The number of the page to request. Default: 1.
-        :param int page_size: The number of elements in each page. Max value: 1000. Default: 100.
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: PublishersResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -208,7 +208,7 @@ class NewsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/news/publishers', 'GET',

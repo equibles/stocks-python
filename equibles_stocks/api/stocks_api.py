@@ -41,9 +41,9 @@ class StocksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int page:
-        :param int page_size:
-        :return: CommonStocksResponse
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -63,9 +63,9 @@ class StocksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int page:
-        :param int page_size:
-        :return: CommonStocksResponse
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -107,7 +107,7 @@ class StocksApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/list', 'GET',
@@ -117,7 +117,7 @@ class StocksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='CommonStocksResponse',  # noqa: E501
+            response_type='StockProfilesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -200,7 +200,7 @@ class StocksApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/officers', 'GET',
@@ -228,7 +228,7 @@ class StocksApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :return: CommonStockResponse
+        :return: StockProfileResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -249,7 +249,7 @@ class StocksApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :return: CommonStockResponse
+        :return: StockProfileResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -293,7 +293,7 @@ class StocksApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/profile', 'GET',
@@ -303,7 +303,114 @@ class StocksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='CommonStockResponse',  # noqa: E501
+            response_type='StockProfileResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def screener(self, body, **kwargs):  # noqa: E501
+        """Get a list of stocks constraint to several criteria.  # noqa: E501
+
+        Get a list of the stocks constraint to several criteria. You only need to fill the fields of ScreenerRequest that you want to use as filters.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.screener(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param ScreenerRequest body: The criteria used to filter the search results. You only need to fill the fields that you want to use on the search. (required)
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.screener_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.screener_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def screener_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Get a list of stocks constraint to several criteria.  # noqa: E501
+
+        Get a list of the stocks constraint to several criteria. You only need to fill the fields of ScreenerRequest that you want to use as filters.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.screener_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param ScreenerRequest body: The criteria used to filter the search results. You only need to fill the fields that you want to use on the search. (required)
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'page', 'page_size']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method screener" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `screener`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'page' in params:
+            query_params.append(('page', params['page']))  # noqa: E501
+        if 'page_size' in params:
+            query_params.append(('pageSize', params['page_size']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Query String']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/stocks/screener', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='StockProfilesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -321,9 +428,9 @@ class StocksApi(object):
 
         :param async_req bool
         :param str text: The text to search for. (required)
-        :param int page:
-        :param int page_size:
-        :return: CommonStocksResponse
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -344,9 +451,9 @@ class StocksApi(object):
 
         :param async_req bool
         :param str text: The text to search for. (required)
-        :param int page:
-        :param int page_size:
-        :return: CommonStocksResponse
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 100.
+        :return: StockProfilesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -394,7 +501,7 @@ class StocksApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/search', 'GET',
@@ -404,7 +511,7 @@ class StocksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='CommonStocksResponse',  # noqa: E501
+            response_type='StockProfilesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -422,8 +529,8 @@ class StocksApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page:
-        :param int page_size:
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: SplitsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -445,8 +552,8 @@ class StocksApi(object):
 
         :param async_req bool
         :param str full_ticker: The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
-        :param int page:
-        :param int page_size:
+        :param int page: The number of the page to request.
+        :param int page_size: The number of elements in each page. Max value: 1000.
         :return: SplitsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -495,7 +602,7 @@ class StocksApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer', 'Query String']  # noqa: E501
+        auth_settings = ['Query String']  # noqa: E501
 
         return self.api_client.call_api(
             '/stocks/splits', 'GET',
